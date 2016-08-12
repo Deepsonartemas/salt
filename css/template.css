@@ -659,17 +659,18 @@ nav ul li a:before {
 
 #logo {
     font-size: 0;
-    margin: 0;
+    margin: auto;
     padding: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin: -133px 0 0 -133px;
-    width: 266px;
-    height: 266px;
+    position: fixed;
+        top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
     display: block;
     background: url(../images/salt.png) no-repeat center center;
-    z-index: 10;
+    background-size: 12%;
 }
 
 			
@@ -677,8 +678,8 @@ canvas {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 100%!important;
+    height: 100%!important;
 }
 
 
@@ -1346,6 +1347,119 @@ a.next_link, a.prev_link {
 .view_map {
     padding: 40px 0 0 15%;
 }
+
+
+/*============================ View map modal start ===========================*/
+.modalDialog {
+    position: fixed;
+    font-family: 'NeuzeitSLTBookHeavy';
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 99999;
+    opacity:0;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+}
+.modalDialog:target {
+    opacity:1;
+    pointer-events: auto;
+}
+.modalDialog > div {
+    max-width: 900px;
+    width: 90%;
+    position: relative;
+    margin: 10% auto;
+    padding: 20px 20px;
+    border-radius: 0;
+    background: #fff;
+}
+/*
+.modalDialog .close {
+    
+    position: absolute;
+    right: 5px;
+    text-align: center;
+    top: 5px;
+    width: 35px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+*/
+
+.close {
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    overflow: hidden;
+    float: right;
+    opacity: 1;
+    top: -10px;
+}
+.close.big {
+    -webkit-transform: scale(3);
+    -moz-transform: scale(3);
+    -ms-transform: scale(3);
+    -o-transform: scale(3);
+    transform: scale(3);
+}
+.close::before {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.close::after {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+.close::before, .close::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    margin-top: -1px;
+    background: #000;
+}
+.close:hover {
+    color: #0ca3db;
+}
+.map_sec {
+    width: 100%;
+    padding: 20px 20px;
+}
+.map_sec iframe{
+    width: 100%;
+}
+/*============================ View map modal end ===========================*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
  

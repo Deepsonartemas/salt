@@ -13,6 +13,9 @@
         padding: 3% 0;
     }
 */
+    #logo{
+        background-size: 10%;
+    }
 	
 }
 @media screen and (max-width: 991px) {
@@ -324,9 +327,8 @@
     .gallery h1 {
         margin: 0 0 0 -5px;
     }
-   
-    
 }
+
 /*
 @media screen and (max-width: 429px) {
     nav ul{
@@ -338,6 +340,7 @@
     }
 }
 */
+
 @media (min-width: 768px) and (max-width: 991px) {
     nav ul li {
         padding: 0 20px 0 0;
