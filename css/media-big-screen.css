@@ -15,6 +15,65 @@
 */
 	
 }
+@media screen and (max-width: 991px) {
+    
+    
+    /* ========================== Responsive tab start ====================== */
+    ul.resp-tabs-list, .resp-tab-content-active{
+        display: none;
+    }
+    .resp-tabs-container{
+        width: 100%;
+    }
+    h2.resp-accordion{
+        display: block;
+    }
+    h2.resp-accordion a{
+        display: inline-block;
+    }
+    .detail_section h2.resp-accordion{
+        padding: 0 0 20px 0;
+    }
+    .description{
+        padding: 30px 0;
+    }
+    h2.resp-accordion {
+	    font-size:13px;
+	    margin:0px;
+	    padding: 15px 0;
+	    text-align:left;
+	    text-transform:uppercase;
+        cursor: pointer;
+        color: #000;
+        width: 100%;
+        
+    }
+    h2.resp-accordion b{
+        display: inline-block;
+        padding: 0 15px 0 0;
+    }
+    h2.resp-tab-active span.resp-arrow:before{
+        content: "\f00d";
+    }
+    .resp-arrow:before {
+        font-family: 'FontAwesome';
+        content: "\f067";
+        position: relative;
+        bottom: 0px;
+        font-size: 10px;
+        color: #000;
+        right: 0;
+        margin: 0 0 0 20px;
+        float: right;
+    }
+    .resp-arrow {
+        width: 0;
+        height: 0;
+    }
+    
+    /* ========================== Responsive tab end ======================= */
+    
+}
 @media screen and (max-width: 767px) {
 
    /* =================== Header section responsive start=================== */
@@ -115,6 +174,8 @@
         padding:  5px 0;
     }
     /* ======================== Menu responsive end ========================= */
+
+    
     .banner {
         padding: 80px 0 0 0;
     }
@@ -176,23 +237,31 @@
     .detail_section h2{
         padding: 0 8px 15px 0;
     }
+    .section_head .spacer{
+        display: none;
+    }
     .section_head .icon{
         margin: 0 20px 0 0;
         max-width: 50px;
         width: 20%;
     }
     .section_head{
-        padding: 0 0 30px 0;
+        padding: 0 0 50px 0;
     }
     .list_block{
         padding: 50px 15% 0 0;
     }
-
-    .floorplans_list ul li a{
+    .floorplans_list{
+        padding: 50px 0 20px 0;
+    }
+    .detail_section  .floorplans_list h2{
+        padding: 0 0 30px 0;
+    }
+    .floorplans_list{
         float: none;
     }
     .floorplans_list ul li span{
-        margin: 0 40px 5px 0;
+        margin: 5px 30px 5px 0;
     }
     .section_head .icon .counting{
         width: 35px;
@@ -217,7 +286,7 @@
     .download{
         float: none;
         width: 100%;
-        padding: 50px 0 0 0;
+        padding: 30px 0 0 0;
     }
     .acco_head.accordion-toggle:after{
         position: absolute;
@@ -227,6 +296,9 @@
     .form{
         width: 100%;
         float: none;
+    }
+    .detail_section .form{
+        padding: 50px 0 0 0;
     }
     .button_black{
         float: none;
@@ -244,8 +316,15 @@
         padding: 50px 0 0 0;
     }
     .gallery{
-        margin: 50px 0 0 0;
+        margin: 0 0 0 0;
     }
+    .gallery .nav{
+        position: relative;
+    }
+    .gallery h1 {
+        margin: 0 0 0 -5px;
+    }
+   
     
 }
 /*
@@ -274,15 +353,30 @@
     .list_block{
         padding: 0 0 0 0;
     }
+    .list_block.list_acco {
+        padding: 50px 0 0 0;
+    }
     .download{
         float: none;
+        padding: 30px 0 0 0;
     }
     .form{
         float: none;
+    }
+    .detail_section .form{
+        padding: 50px 0 0 0;
+    }
+    .view_map{
+        padding: 40px 0 0 0;
     }
 /*
     header.bg_change .logo img{
         max-width: 60px
     }
 */
+}
+@media (min-width: 991px) and (max-width: 1199px) {
+    .section_head .spacer{
+        display: none;
+    }
 }

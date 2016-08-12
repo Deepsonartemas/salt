@@ -106,7 +106,7 @@
 .slider-next {
     left: -5px;
     bottom: 0;
-    background: #efefef url(../images/prev.jpg) no-repeat 0 0px!important;
+    background: #fff url(../images/prev.jpg) no-repeat 0 0px;
     color: #fff;
     width: 49px;
     height: 39px;
@@ -116,7 +116,7 @@
 .slider-prev {
     right: 5px;
     bottom: 0;
-    background: #efefef url(../images/next.jpg) no-repeat 0px 0px!important;
+    background: #fff url(../images/next.jpg) no-repeat 0px 0px;
     color: #fff;
     width: 49px;
     height: 39px;
@@ -355,6 +355,15 @@
     text-align: center;
     padding: 45px 0 0 0;
 }
+@media (max-width: 768px) {
+    .slider-prev, .slider-next {
+        background-size: 40px!important;
+    }
+    .image_title{
+        padding: 40px 0 0 0;
+    }
+}
+    
 @media (min-width: 768px) {
     .nav-tabs.nav-justified > li > a {
         border-bottom: 1px solid #fff;

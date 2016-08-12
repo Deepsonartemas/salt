@@ -154,10 +154,10 @@ header.bg_change .modal_line:after, header.bg_change .modal_line:before{
 .home.register .modal_line:after, .home.register .modal_line:before, .home.register .modalToggle .modal_line{
     background: #fff;
 }
-.home.main_nav .modal_line:after, .home.main_nav .modal_line:before, .home.main_nav .modalToggle .modal_line{
+.home.main_nav .modal_line:after, .home.main_nav .modal_line:before, .home.main_nav .modalToggle .modal_line, header.bg_change .modalToggle .modal_line{
     background: #fff;
 }
-.home .modal_line:after, .home .modal_line:before, .home .modalToggle .modal_line:before, .home .modalToggle .modal_line:after, .home #line.menuToggle .mainLine:before, .home #line.menuToggle .mainLine:after, .home.visit .modal_line, header.bg_change .modal_line, header.bg_change .mainLine:after, header.bg_change .mainLine:before, header.bg_change .mainLine {
+.home .modal_line:after, .home .modal_line:before, .home .modalToggle .modal_line:before, .home .modalToggle .modal_line:after, .home #line.menuToggle .mainLine:before, .home #line.menuToggle .mainLine:after, .home.visit .modal_line, header.bg_change .modal_line, header.bg_change .mainLine:after, header.bg_change .mainLine:before, header.bg_change .mainLine, header.bg_change .modalToggle .modal_line:before, header.bg_change .modalToggle .modal_line:after {
     background: #000;
 }
 .register .visit_suite .modal_line{
@@ -255,7 +255,7 @@ nav ul li a:before {
     width: 100%;
     position: relative;
     cursor: pointer;
-    margin: 0 3%;
+    margin: 0 0;
     vertical-align: middle;
     float: right;
 }
@@ -264,7 +264,7 @@ nav ul li a:before {
     width: 100%;
     position: relative;
     cursor: pointer;
-    margin: 0 3%;
+    margin: 0 0;
     vertical-align: middle;
     float: right;
     cursor: pointer;
@@ -396,7 +396,7 @@ nav ul li a:before {
 .home header .logo{
     display: none;
 }
-.home header.bg_change .logo{
+.home header.bg_change .logo, .home.visit header .logo, .home.register header .logo{
     display: block;
 }
 .logo{
@@ -578,7 +578,7 @@ nav ul li a:before {
 .menu-modal ul li ul li{
     display: block;
     width: 70%;
-    padding: 15px 0 15px 0;
+    padding: 20px 0 20px 0;
     border-bottom: 1px dotted #999;
     margin: 0 auto;
     float: none;
@@ -963,11 +963,11 @@ display: inline-block;
 }
 .detail_section .acco_head h2{
     padding: 0 0 7px 0;
-    margin: 0 0 10px 0;
+    margin: 0 0 20px 0;
 }
 .acco_head.accordion-toggle h2:before {
     font-family: 'FontAwesome';
-    content: "\f068";
+    content: "\f00d";
     position: relative;
     bottom: 0px;
     font-size: 10px;
@@ -1097,8 +1097,9 @@ display: inline-block;
     padding: 0 0 5% 28px;
 }
 .floorplans_list{
-    width: 80%;
+    width: 100%;
     float: right;
+    max-width: 220px;
 }
 .floorplans_list ul{
     padding: 0 0 0 0;
@@ -1158,11 +1159,11 @@ a.next_link, a.prev_link {
 .download ul li{
     background: none;
     text-transform: uppercase;
-    padding: 0 0 20px 0;
+    padding: 0 0 28px 0;
 }
 .download ul li span{
     display: inline-block;
-    margin: 0 15px 0 0;
+    margin: 5px 15px 0 0;
     font-family: 'NeuzeitSLTBookHeavy';
 }
 .download ul li a{
@@ -1184,10 +1185,12 @@ a.next_link, a.prev_link {
 
 
 .form {
-    width: 90%; 
+    width: 85%; 
     float: right;
 }
-
+.detail_section .form {
+    padding: 0 0 0 0;
+}
 .accordianMenu {
     display: block;
 }
@@ -1256,7 +1259,7 @@ a.next_link, a.prev_link {
 .button_black  { 
     background: #000;
     border: none;
-    padding: 18px 100px;
+    padding: 18px 85px;
     margin: 5px  0;
     float: right;
     color: #fff;
@@ -1354,8 +1357,6 @@ a.next_link, a.prev_link {
     display: none;
 }
 
-
-
 ul.accordianMenu li {
     
     background: #fff;
@@ -1407,7 +1408,71 @@ ul.accordianMenu ul   {
 
 
 
-.team h3{
+
+/*================================= Responsive tab style start =============================*/
+
+
+ul.resp-tabs-list {
+    width: 20%;
+    float: left;
+    padding: 0 0 0 0;
+}
+.resp-tab-content{
+    display: none;
+}
+.resp-tab-content-active{
+    display: block;
+}
+h2.resp-accordion{
+    display: none;
+}
+.resp-tabs-list .what_we_content {
+    display: block;
+}
+ul.resp-tabs-list li{
+    color: #000;
+    line-height: 1.2;
+    padding: 0 0 30px 0;
+    display: block;
+    font-family: 'NeuzeitSLTBookHeavy';
+}
+ul.resp-tabs-list li a{
+    display: inline-block;
+    color: #000;
+    text-decoration: none;
+}
+ul.resp-tabs-list li a:before {
+    font-family: 'FontAwesome';
+    content: "\f067";
+    position: relative;
+    bottom: 0px;
+    font-size: 10px;
+    color: #000;
+    right: 0;
+    margin: 0 0 0 20px;
+    float: right;
+}
+ul.resp-tabs-list li.resp-tab-active a:before{
+    content: "\f00d";
+}
+ul.resp-tabs-list li a:after{
+    content: "";
+    display: block;
+    background: #000;
+    height: 2px;
+    margin: 6px 0 0 0;
+    position: relative;
+}
+ul.resp-tabs-list li.resp-tab-active{
+    margin: 0;
+    position: relative;
+    width: 100%;
+    line-height: 1.2;
+}
+ul.resp-tabs-list li.resp-tab-active span{
+    color: #000!important;
+}
+.description h3{
     text-decoration: underline;
     line-height: 1.6;
     font-weight: normal;
@@ -1415,7 +1480,7 @@ ul.accordianMenu ul   {
     font-family: 'NeuzeitSLTBook';
     padding: 0 0 30px 0;
 }
-.team h3:before{
+.description h3:before{
     content: "";
     display: block;
     background: #000;
@@ -1423,41 +1488,39 @@ ul.accordianMenu ul   {
     width: 12px;
     margin: 0 0 10px 0;
 }
+.resp-tabs-container {
+    width: 80%;
+    float: left;
+    position: relative;
+}
+.my {
+    width: 100%;
+    margin: 0 0;
+}
+.description{
+    padding: 0;
+}
+
+
+/*================================= Responsive tab style end =============================*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .list_wrpr {
     padding: 0 0 12% 0;
 }
-.team .panel{
-    width: 100%;
-}
-.team .panel:after, .team .panel:before{
-    content: "";
-    display: table;
-}
-.team .panel:after{
-    clear: both;
-}
-.team .panel .acco_head {
-    width: 30%;
-    float: left;
-}
-.team .panel .panel-collapse {
-    width: 80%;
-    position: absolute;
-    right: 0;
-    top: 0;
-}
 
-.list_block.team {
-    position: relative;
-    padding: 0 10% 0 0;
-    min-height: 300px;
-}
-.team .acco_head.accordion-toggle:after {
-    content: "\f00d";
-}
-.team .acco_head.accordion-toggle.collapsed:after {
-    content: "\f067";
-}
 .gallery h1{
     padding: 1% 0 7% 0;
 }
@@ -1474,3 +1537,23 @@ ul.accordianMenu ul   {
     position: absolute;
     bottom: 75px;
 }
+.menu-modal ul  li:first-child {
+    margin: 0 0px 0 -30px!important;
+    }
+
+.menu-modal ul  li ul li:first-child {
+    margin: 0  auto!important;
+}
+
+.menu-modal ul li:last-child {
+    margin: 0 0 0 40px!important;
+ 
+}
+
+.menu-modal ul  li ul li:last-child {
+    margin: 0  auto!important;
+ 
+}
+
+
+ 

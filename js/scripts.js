@@ -12,7 +12,10 @@
 
 
 
+
+    
 $(document).ready(function () {
+    
     $('.menuTrigger').on("click", function () {
         $(this).toggleClass('menuToggle');
         $('.visit_suite_modal').hide();
