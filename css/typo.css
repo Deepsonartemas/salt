@@ -1,0 +1,38 @@
+/*
+    Theme Name: SALT project
+    Author: Artemas technologies
+    Author URL: http://artemasdigital.com/
+    Description: salt 2016.
+    Document   : Framework
+    Created on : August 8, 2016, 10:50:00 AM
+*/
+
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('../fonts/fontawesome-webfont.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/fontawesome-webfont.woff') format('woff'),
+  url('../fonts/fontawesome-webfont.ttf') format('truetype'),
+  url('../fonts/fontawesome-webfont.svg#NeuzeitSLT-Book') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'NeuzeitSLTBook';
+  src: url('../fonts/NeuzeitSLT-Book.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/NeuzeitSLT-Book.woff') format('woff'),
+  url('../fonts/NeuzeitSLT-Book.ttf') format('truetype'),
+  url('../fonts/NeuzeitSLT-Book.svg#NeuzeitSLT-Book') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'NeuzeitSLTBookHeavy';
+  src: url('../fonts/NeuzeitSLT-BookHeavy.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/NeuzeitSLT-BookHeavy.woff') format('woff'),
+  url('../fonts/NeuzeitSLT-BookHeavy.ttf') format('truetype'),
+  url('../fonts/NeuzeitSLT-BookHeavy.svg#NeuzeitSLT-BookHeavy') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}

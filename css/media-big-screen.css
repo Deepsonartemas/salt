@@ -1,0 +1,288 @@
+/*
+    Theme Name: SALT project
+    Author: Artemas technologies
+    Author URL: http://artemasdigital.com/
+    Description: salt 2016.
+    Document   : Framework
+    Created on : August 8, 2016, 10:50:00 AM
+*/
+
+@media screen and (min-width: 1025px) and (max-width: 1600px) {
+/*
+    .modal_content{
+        padding: 3% 0;
+    }
+*/
+	
+}
+@media screen and (max-width: 767px) {
+
+   /* =================== Header section responsive start=================== */
+  
+    
+    .accordianMenu{
+ 
+    display: block;
+}
+    
+    .accordianSubMenu{
+  display:none;
+  background-color:#fff;
+  overflow:hidden;
+  }
+     header nav{
+        display: none;
+    }
+    header {
+        padding: 10px 0;
+        height: 80px;
+    }
+    nav {
+        width: 70%;
+        position: absolute;
+        left: 110px;
+    }
+    nav ul{
+        padding: 45px 0 0 0;
+    }
+    nav ul li{
+        padding: 0 10px 0 0;
+        font-size: 12px;
+    }
+    header.bg_change .nav{
+        top: 25px;
+    }
+    .nav {
+        position: absolute;
+        float: none;
+        right: 20px;
+        top: 25px;
+    }
+    header.bg_change .logo img{
+            transform: scale(1);
+    }
+    /* =================== Header section responsive end===================== */
+    
+    
+    /* ======================== Menu responsive start ======================= */
+    .modal_content h1{
+        padding: 40px 0 20px 0;
+    }
+    .modal_content{
+        padding: 25px 0 5% 0;
+    }
+    .menu-modal ul{
+        padding: 60px 0px 60px 0;
+        height: 450px;
+        overflow-y: scroll;
+    }
+    .menu-modal #accordion{
+        display: block;
+    }
+    
+.menu-modal .container {
+        width: 98%;
+    }
+    
+ 
+    ul.menu_sec  {
+        display: none;
+    }
+ 
+    .menu-modal ul li a{
+        display: block;
+    }
+    .menu-modal ul li{
+        width: 100%;  
+        padding: 0;
+    }
+    .menu-modal ul li a{
+        padding: 10px 0;
+        display: inline-block;
+    }
+ 
+    .menu-modal ul li ul{ 
+        padding:  15px  0 25px 0;
+                overflow: inherit;
+        height: auto;
+    }
+    .menu-modal ul li ul li {
+        width: 50%; 
+    }
+ 
+    .menu-modal ul li ul li a{
+        color: #5a5a5a;
+        padding:  5px 0;
+    }
+    /* ======================== Menu responsive end ========================= */
+    .banner {
+        padding: 80px 0 0 0;
+    }
+    
+    .container {
+        width: 90%;
+    }
+    .projects article {
+        text-align: center;
+        width: 85%;
+        margin: 0 auto 30px;
+    }
+    .projects .container .row:last-child article {
+        border-bottom: 0px solid #000;
+        padding-bottom: 0;
+    }
+    .projects article h2{
+        padding: 6% 0;
+    }
+    .header .container{
+        position: relative;
+    }
+    .logo {
+        float: none;
+        position: absolute;
+        top: 10px;
+        left: 6%;
+        right: 0;
+        /* margin: 0 auto; */
+        width: 60px;
+    }
+    
+    .visit_suite_modal, .register_interest_modal, .menu-modal{
+        top: 80px;  
+    }
+
+    footer ul li ul {
+        padding: 5px 0 10px 0;
+    }
+    footer ul li ul li{
+        display: inline-block;
+        padding: 0 5px 0 0;
+        width: auto;
+    }
+    footer .ftr_btm, footer .copy, footer .privacy{
+        padding: 15px 0 0 0;
+        text-align: left;
+    }
+    footer .privacy a{
+        margin: 0 30px 0 0;
+    }
+    footer address{
+        padding: 5px 0 0 0;
+    }
+    h1{
+        font-size: 30px;
+        padding: 0 0 20px 0;
+    }
+    .detail_section h2{
+        padding: 0 8px 15px 0;
+    }
+    .section_head .icon{
+        margin: 0 20px 0 0;
+        max-width: 50px;
+        width: 20%;
+    }
+    .section_head{
+        padding: 0 0 30px 0;
+    }
+    .list_block{
+        padding: 50px 15% 0 0;
+    }
+
+    .floorplans_list ul li a{
+        float: none;
+    }
+    .floorplans_list ul li span{
+        margin: 0 40px 5px 0;
+    }
+    .section_head .icon .counting{
+        width: 35px;
+        height: 35px;
+    }
+    
+    .detail_section{
+        top: -60px;
+    }
+    .client_logo{
+        text-align: left;
+        padding: 0 0 0 0;
+    }
+    .client_logo figure {
+        float: none;
+        display: inline-block;
+        margin: 0 30px 20px 0;
+    }
+    .client_logo figure img{
+        max-width: 60%;
+    }
+    .download{
+        float: none;
+        width: 100%;
+        padding: 50px 0 0 0;
+    }
+    .acco_head.accordion-toggle:after{
+        position: absolute;
+        bottom: auto;
+        left: auto;
+    }
+    .form{
+        width: 100%;
+        float: none;
+    }
+    .button_black{
+        float: none;
+    }
+    .detail_section .form h2 {
+        padding: 15px 0 15px 0;
+    }
+    .latest_section {
+        padding: 120px 0 5% 0;
+    }
+    .latest_list{
+        width: 100%;
+    }
+    .view_map{
+        padding: 50px 0 0 0;
+    }
+    .gallery{
+        margin: 50px 0 0 0;
+    }
+    
+}
+/*
+@media screen and (max-width: 429px) {
+    nav ul{
+        padding: 15px 0 0 12%;
+    }
+    nav ul li {
+        font-size: 12px;
+        padding: 0 10px 0 0
+    }
+}
+*/
+@media (min-width: 768px) and (max-width: 991px) {
+    nav ul li {
+        padding: 0 20px 0 0;
+    }
+    h1{
+        font-size: 40px;
+    }
+    .section_head .icon{
+        margin: 0 0 0 30px;
+        max-width: 85px;
+        width: 14%;
+    }
+    .list_block{
+        padding: 0 0 0 0;
+    }
+    .download{
+        float: none;
+    }
+    .form{
+        float: none;
+    }
+/*
+    header.bg_change .logo img{
+        max-width: 60px
+    }
+*/
+}

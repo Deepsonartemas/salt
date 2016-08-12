@@ -1,0 +1,368 @@
+/**
+ * BxSlider v4.0 - Fully loaded, responsive content slider
+ * http://bxslider.com
+ *
+ * Written by: Steven Wanderski, 2012
+ * http://stevenwanderski.com
+ * (while drinking Belgian ales and listening to jazz)
+ *
+ * CEO and founder of bxCreative, LTD
+ * http://bxcreative.com
+ */
+
+
+/** RESET AND LAYOUT
+===================================*/
+
+.bx-wrapper {
+    position: relative;
+    margin: 0 auto 60px;
+    padding: 0;
+    *zoom: 1;
+}
+.bx-wrapper img {
+    max-width: 100%;
+    display: block;
+}
+
+/** THEME
+===================================*/
+
+.bx-wrapper .bx-viewport {
+    left: -5px;
+    background: #fff;
+}
+.bx-wrapper .bx-pager,
+.bx-wrapper .bx-controls-auto {
+    position: absolute;
+    bottom: -30px;
+    width: 100%;
+}
+
+/* LOADER */
+
+.bx-wrapper .bx-loading {
+    min-height: 50px;
+/*    background: url(images/bx_loader.gif) center center no-repeat #fff;*/
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2000;
+}
+
+/* PAGER */
+
+.bx-wrapper .bx-pager {
+    text-align: center;
+    font-size: .85em;
+    font-family: Arial;
+    font-weight: bold;
+    color: #666;
+    padding-top: 20px;
+}
+.bx-wrapper .bx-pager .bx-pager-item,
+.bx-wrapper .bx-controls-auto .bx-controls-auto-item {
+    display: inline-block;
+    *zoom: 1;
+    *display: inline;
+}
+.bx-wrapper .bx-pager.bx-default-pager a {
+    background: #666;
+    text-indent: -9999px;
+    display: block;
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    outline: 0;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+.bx-wrapper .bx-pager.bx-default-pager a:hover,
+.bx-wrapper .bx-pager.bx-default-pager a.active {
+    background: #000;
+}
+
+/* DIRECTION CONTROLS (NEXT / PREV) */
+
+
+/*
+.bx-wrapper .bx-prev {
+	left: 10px;
+	background: url(../images/next.jpg) no-repeat 0 -32px;
+}
+
+.bx-wrapper .bx-next {
+	right: 10px;
+	background: url(../images/prev.jpg) no-repeat -43px -32px;
+}
+*/
+
+.outside {
+    width: 100%;
+}
+.slider-next {
+    left: -5px;
+    bottom: 0;
+    background: #efefef url(../images/prev.jpg) no-repeat 0 0px!important;
+    color: #fff;
+    width: 49px;
+    height: 39px;
+    display: block;
+    position: absolute;
+}
+.slider-prev {
+    right: 5px;
+    bottom: 0;
+    background: #efefef url(../images/next.jpg) no-repeat 0px 0px!important;
+    color: #fff;
+    width: 49px;
+    height: 39px;
+    display: block;
+    position: absolute;
+}
+.slider-prev a,
+.slider-next a {
+    width: 49px;
+    height: 39px;
+    display: block;
+    text-indent: -9999px;
+}
+.bx-wrapper .bx-prev:hover {
+    background-position: 0 0;
+}
+.bx-wrapper .bx-next:hover {
+    background-position: -43px 0;
+}
+.bx-wrapper .bx-controls-direction a {
+    position: absolute;
+    top: 50%;
+    margin-top: -16px;
+    outline: 0;
+    width: 32px;
+    height: 32px;
+    text-indent: -9999px;
+    z-index: 9999;
+}
+.bx-wrapper .bx-controls-direction a.disabled {
+    display: none;
+}
+
+/* AUTO CONTROLS (START / STOP) */
+
+.bx-wrapper .bx-controls-auto {
+    text-align: center;
+}
+.bx-wrapper .bx-controls-auto .bx-start {
+    display: block;
+    text-indent: -9999px;
+    width: 10px;
+    height: 11px;
+    outline: 0;
+    background: url(images/controls.png) -86px -11px no-repeat;
+    margin: 0 3px;
+}
+.bx-wrapper .bx-controls-auto .bx-start:hover,
+.bx-wrapper .bx-controls-auto .bx-start.active {
+    background-position: -86px 0;
+}
+.bx-wrapper .bx-controls-auto .bx-stop {
+    display: block;
+    text-indent: -9999px;
+    width: 9px;
+    height: 11px;
+    outline: 0;
+    background: url(images/controls.png) -86px -44px no-repeat;
+    margin: 0 3px;
+}
+.bx-wrapper .bx-controls-auto .bx-stop:hover,
+.bx-wrapper .bx-controls-auto .bx-stop.active {
+    background-position: -86px -33px;
+}
+
+/* PAGER WITH AUTO-CONTROLS HYBRID LAYOUT */
+
+.bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-pager {
+    text-align: left;
+    width: 80%;
+}
+.bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-controls-auto {
+    right: 0;
+    width: 35px;
+}
+
+/* IMAGE CAPTIONS */
+
+.bx-wrapper .bx-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #666\9;
+    background: rgba(80, 80, 80, 0.75);
+    width: 100%;
+}
+.bx-wrapper .bx-caption span {
+    color: #fff;
+    font-family: Arial;
+    display: block;
+    font-size: .85em;
+    padding: 10px;
+}
+.gallery {
+    position: relative;
+    padding: 60px 0 0;
+}
+.gallery .nav-tabs > li a {
+    color: #bebab7;
+}
+.gallery .nav-tabs > li:first-child {
+    text-align: left!important;
+    margin: 0 0 20px -5px;
+}
+.gallery .nav-tabs > li:last-child {
+    text-align: right!important;
+    margin: 0 0 20px 5px;
+}
+.gallery .nav {
+    margin-bottom: -2px;
+    padding-left: 0;
+    list-style: none;
+    width: 100%;
+    top: 0px;
+    border: 0;
+    right: 0;
+}
+.gallery .nav > li {
+    position: relative;
+    display: block;
+}
+.gallery .nav > li > a {
+    position: relative;
+    display: block;
+    padding: 10px 0;
+}
+.gallery .nav > li > a:hover,
+.gallery .nav > li > a:focus {
+    text-decoration: none;
+    background-color: transparent;
+}
+.gallery .nav > li.disabled > a {
+    color: #777777;
+}
+.gallery .nav > li.disabled > a:hover,
+.gallery .nav > li.disabled > a:focus {
+    color: #777777;
+    text-decoration: none;
+    background-color: transparent;
+    cursor: not-allowed;
+}
+.gallery .nav .open > a,
+.gallery .nav .open > a:hover,
+.gallery .nav .open > a:focus {
+    background-color: #fff;
+    color: #000;
+    
+}
+.gallery .nav .nav-divider {
+    height: 1px;
+    margin: 9px 0;
+    overflow: hidden;
+    background-color: #e5e5e5;
+}
+.gallery .nav > li > a > img {
+    max-width: none;
+}
+.gallery .nav-tabs {
+    border-bottom: 0;
+}
+.gallery .nav-tabs > li {
+    float: left;
+    width: 33.3%;
+    text-align: center;
+    font-family: 'NeuzeitSLTBookHeavy';
+    font-size: 13px;
+    text-transform: uppercase;
+    margin: 0 0 20px 0;
+}
+.gallery .nav-tabs > li > a {
+    margin-right: 2px;
+    line-height: 1.42857143;
+    border: 0px solid transparent;
+    border-radius: 4px 4px 0 0;
+}
+.gallery .nav-tabs > li.active a{
+    color: #000!important;
+    display: inline-block
+}
+.gallery .nav-tabs > li.active a:after{
+    content: "";
+    display: block;
+    background: #000;
+    height: 2px;
+    width: 100%;
+    margin: 5px 0 0 0;
+}
+.gallery .nav-tabs > li > a:hover {
+    border-color:transparent;
+}
+.gallery .nav-tabs > li.active > a,
+.gallery .nav-tabs > li.active > a:hover,
+.gallery .nav-tabs > li.active > a:focus {
+    color: #555555;
+    background-color: transparent;
+    border: none;
+    border-bottom-color: transparent;
+    cursor: default;
+}
+.gallery .nav-tabs.nav-justified {
+    width: 100%;
+    border-bottom: 0;
+}
+.gallery .nav-tabs.nav-justified > li {
+    float: none;
+}
+.gallery .nav-tabs.nav-justified > li > a {
+    text-align: center;
+    margin-bottom: 5px;
+}
+.gallery .nav-tabs.nav-justified > .dropdown .dropdown-menu {
+    top: auto;
+    left: auto;
+}
+@media (min-width: 768px) {
+    .gallery .nav-tabs.nav-justified > li {
+        display: table-cell;
+        width: 1%;
+    }
+    .gallery .nav-tabs.nav-justified > li > a {
+        margin-bottom: 0;
+    }
+}
+.gallery .nav-tabs.nav-justified > li > a {
+    margin-right: 0;
+    border-radius: 4px;
+}
+.gallery .nav-tabs.nav-justified > .active > a,
+.gallery .nav-tabs.nav-justified > .active > a:hover,
+.gallery .nav-tabs.nav-justified > .active > a:focus {
+    border: 0px solid #fff;
+}
+.image_title {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 45px 0 0 0;
+}
+@media (min-width: 768px) {
+    .nav-tabs.nav-justified > li > a {
+        border-bottom: 1px solid #fff;
+        border-radius: 4px 4px 0 0;
+    }
+    .gallery .nav-tabs.nav-justified > .active > a,
+    .gallery .nav-tabs.nav-justified > .active > a:hover,
+    .gallery .nav-tabs.nav-justified > .active > a:focus {
+        border-bottom-color: #ffffff;
+    }
+}
